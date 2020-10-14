@@ -9,9 +9,20 @@
 :root {
     /* colors */
 
+    --color-light: #CCE7FF;
+    --color-dark: #0F3557;
+
+    --color-front: var(--color-dark);
+    --color-back: var(--color-light);
     /* opacity */
 
     /* transitions */
+}
+
+
+.is-night{
+    --color-front: var(--color-light);
+    --color-back: var(--color-dark);
 }
 
 /*------------------------------------*\
@@ -27,8 +38,10 @@
 html {
     font-size: 16px;
     line-height: 1.5;
-    font-family: Helvetica, arial, sans-serif;
+    font-family: "Work Sans";
     box-sizing: border-box;
+    color: var(--color-front);
+    background-color: var(--color-back);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -271,6 +284,12 @@ input::placeholder {
     ---
     Main app wrapper
 */
+.c-app{
+    max-width: 25em;
+    padding: 2em;
+    margin: auto;
+}
+
 
 /*
     Component: Horizon
